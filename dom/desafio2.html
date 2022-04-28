@@ -1,0 +1,35 @@
+<script src="https://unpkg.com/vue"></script>
+
+<div id="desafio">
+ <p>{{ contador }}</p>>
+ <button v-on:click="alerta">exibir alerta</button>
+
+
+ <p v-on:mousemove="atualizarXY">
+     Mouse: {{ x }} {{ y }}
+    <span v-on:mousemove.stop.prevent="">Parar Aqui</span>
+    </p>
+
+ <a v-on:click.prevent href="http://google.com">google</a>
+ <hr>
+ <input type="text" v-on:keydown.enter="alterarValor">
+ <p>{{ valor }}</p>>
+ 
+</div>
+
+
+<script>
+    new Vue ({
+        el: '#app',
+        
+        methods: {
+                       
+            alerta(){
+                alert('Alerta teste')
+            },
+        
+        }
+    })
+</script>
+
+
